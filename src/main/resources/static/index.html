@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+<h1>Books</h1>
+
+<form id="form" action="/books" method="post">
+    <label>
+        ISBN
+        <input name="ISBN" type="text">
+    </label>
+    <label>
+        Title
+        <input name="title" type="text">
+    </label>
+
+    <button type="submit">Add book</button>
+</form>
+
+<table id="table">
+    <thead>
+    <tr>
+        <th>ISBN</th>
+        <th>Title</th>
+    </tr>
+    </thead>
+</table>
+
+<script src="./ts/index.js" type="module"></script>
+</body>
+</html>

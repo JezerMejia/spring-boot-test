@@ -30,9 +30,9 @@ public class LibraryController {
         return "books";
     }
 
-    @GetMapping("/")
+    @GetMapping("/form")
     public String getForm(Model model) {
-        return "index";
+        return "form";
     }
 
     @PostMapping("/save-book")
