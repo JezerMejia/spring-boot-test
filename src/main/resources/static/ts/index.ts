@@ -1,4 +1,4 @@
-import {addBook, Book, fetchBooks} from "./Book.js"
+import {addBook, Book, fetchBooks, removeBook} from "./Book.js"
 
 function createBookRow(book: Book) {
     const row = document.createElement("tr");
@@ -7,6 +7,15 @@ function createBookRow(book: Book) {
     isbnRow.textContent = book.ISBN
     const titleRow = row.insertCell()
     titleRow.textContent = book.title
+
+    const deleteRow = row.insertCell()
+    const button = document.createElement("button")
+    button.textContent = "Delete"
+    deleteRow.appendChild(button)
+
+    button.addEventListener("click", () => {
+        removeBook(book).then(() => updateTable())
+    })
 
     return row;
 }
